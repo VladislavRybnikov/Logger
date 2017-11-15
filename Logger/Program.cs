@@ -21,11 +21,10 @@ namespace Logger
                 Console.WriteLine(excLog.Message());
             }
             catch (Exception ex)
-            {
-                ExceptionLogger excLog1 = new ExceptionLogger(ex);
-                log = new LogWriter(excLog1);
-                log.Write();
-                Console.WriteLine(excLog1.Message());
+            { 
+                log = new LogWriter(ex);
+                
+                Console.WriteLine(log.ExLogger.Message());
             }
             Console.ReadKey();
         }

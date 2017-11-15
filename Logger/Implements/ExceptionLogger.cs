@@ -16,7 +16,7 @@ namespace Logger.Implements
         }
         public string Message()
         {
-            string message = string.Format("[{0}:dd.MM.yyy HH:mm:ss:fff] [{1}.{2}()] [{3}]\r\n",
+            string message = string.Format("[{0}] [{1}.{2}()] [{3}]\r\n",
                 DateTime.Now, _exception.TargetSite.DeclaringType, _exception.TargetSite.Name, _exception.Message);
             return message;
         }
